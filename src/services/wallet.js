@@ -5,7 +5,7 @@ import {
   signTransaction,
 } from "@stellar/freighter-api";
 
-import { NETWORK_NAME } from "./stellar.js";
+import { NETWORK_NAME, NETWORK_PASSPHRASE } from "./stellar.js";
 
 /** Typed error wrapper so the UI can react to specific wallet failures. */
 export class WalletError extends Error {
@@ -71,7 +71,7 @@ export async function isWalletOnTestnet() {
  */
 export async function signPaymentTransaction(xdr, publicKey) {
   const { signedTxXdr, error } = await signTransaction(xdr, {
-    network: NETWORK_NAME,
+    networkPassphrase: NETWORK_PASSPHRASE,
     address: publicKey,
   });
 
