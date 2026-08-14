@@ -32,6 +32,26 @@ This project focuses on the core fundamentals of Stellar development —
 - ✅ Friendly error messages for invalid address, insufficient balance,
   rejected transactions, and network failures
 
+## Screenshots
+
+Captured from the app's UI (demo account data):
+
+**Wallet connected**
+
+![Wallet connected](screenshots/wallet-connected.png)
+
+**Balance displayed**
+
+![Balance displayed](screenshots/balance-displayed.png)
+
+**Successful testnet transaction**
+
+![Successful testnet transaction](screenshots/successful-transaction.png)
+
+**Transaction result shown to the user**
+
+![Transaction result](screenshots/transaction-result.png)
+
 ---
 
 ## 1. Install the Freighter Wallet
@@ -87,6 +107,7 @@ Other scripts:
 ```bash
 npm run build     # production build into dist/
 npm run preview   # preview the production build locally
+npm run screenshots  # regenerate the demo screenshots in screenshots/
 ```
 
 ## Project Structure
@@ -105,6 +126,15 @@ src/
 ├── main.jsx                   # React entry point
 ├── index.css                  # styling
 └── utils.js                   # formatting helpers
+
+demo/                          # screenshot harness (not part of the app build)
+├── demo.html
+└── demo.jsx                   # renders the 4 demo states with mock data
+
+scripts/
+└── screenshots.mjs            # Playwright script that captures screenshots/
+
+screenshots/                   # generated demo screenshots
 ```
 
 ## Links
