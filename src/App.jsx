@@ -118,10 +118,6 @@ export default function App() {
     }
   }
 
-  const canSend = Boolean(
-    publicKey && !wrongNetwork && balanceInfo?.funded && !connecting,
-  );
-
   return (
     <div className="app">
       <header className="app-header">
@@ -166,12 +162,6 @@ export default function App() {
         <p className="hint">
           <strong>Tip:</strong> accounts on Testnet need a small starting
           balance. Use the Friendbot button above to fund yours.
-        </p>
-      )}
-
-      {!canSend && publicKey && (
-        <p className="muted small">
-          You can send payments once your account is funded on Testnet.
         </p>
       )}
     </div>
