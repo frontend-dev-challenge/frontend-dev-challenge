@@ -109,9 +109,8 @@ src/
 
 ## Links
 
-- **Live deployment:** <https://your-project.vercel.app> (TODO: update)
-- **GitHub repo:** <https://github.com/your-username/stellar-simple-payment-dapp>
-  (TODO: update)
+- **Live deployment:** <https://frontend-dev-challenge.github.io/frontend-dev-challenge/>
+- **GitHub repo:** <https://github.com/frontend-dev-challenge/frontend-dev-challenge>
 
 ## Deployment
 
@@ -119,8 +118,9 @@ This is a static Vite app — deployable anywhere that serves static files:
 
 - **Vercel:** `vercel` (framework preset: Vite; build `npm run build`, output `dist`)
 - **Netlify:** build command `npm run build`, publish directory `dist`
-- **GitHub Pages:** build and publish the `dist/` folder (set `base` in
-  `vite.config.js` to your repo name)
+- **GitHub Pages:** deployed automatically via the workflow in
+  `.github/workflows/deploy.yml` (the `base` path in `vite.config.js` is already
+  set to the repo name)
 
 ---
 
